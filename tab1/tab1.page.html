@@ -1,0 +1,94 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <p style="color:salmon">Kellog Panama Business Institute</p> 
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [scrollEvents]="true" (ionScrollStart)="logScrollStart($event)" (ionScroll)="logScrolling($event)"
+  (ionScrollEnd)="logScrollEnd($event)" class="ion-padding">
+<!-- Colors -->
+
+  
+  
+    <ion-card [routerLink]="['/biginning']">
+      <img src="https://blog.selfbank.es/wp-content/uploads/2019/12/GettyImages-1066324992-720x320.jpg" />
+      <ion-card-header>
+        <ion-card-subtitle>Kellog Panama Business Institute</ion-card-subtitle>
+        <ion-card-title>Biginning</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        Kellog Panama Business Institute is a non-public university with a business-oriented...
+      </ion-card-content>
+    </ion-card >
+    <ion-card [routerLink]="['/mision']">
+      <ion-img src="assets\Kellogg.PNG"></ion-img>
+    
+      <ion-card-header>
+        <ion-card-subtitle>Kellog Panama Business Institute</ion-card-subtitle>
+        <ion-card-title>Mission & Vission</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+       Mission: We are committed to educating, more info...
+  
+  
+   
+      </ion-card-content>
+    </ion-card>
+    <ion-card  [routerLink]="['/events']">
+      <img src="assets/EVENs.jpg" />
+      <ion-card-header>
+        <ion-card-subtitle>Kellog Panama Business Institute</ion-card-subtitle>
+        <ion-card-title>Events</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        All can't be studies, the people of our university need to share experience, emotions, so on with others.
+      </ion-card-content>
+    </ion-card>
+    <ion-card [routerLink]="['/staff']">
+      <img src="assets\staff.png"/>
+      <ion-card-header>
+        <ion-card-subtitle>Kellog Panama Business Institute</ion-card-subtitle>
+        <ion-card-title>Staff</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        It is not always the name of the Institute, but the staff that is part of it.
+      </ion-card-content>
+    </ion-card>
+    <ion-card [routerLink]="['/contac']">
+      <img src="assets\contact us.jpg" />
+      <ion-card-header>
+        <ion-card-subtitle>Kellog Panama Business Institute</ion-card-subtitle>
+        <ion-card-title>Contact us</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p>More info.....</p>
+      </ion-card-content>
+    </ion-card>
+  
+  
+
+  <ion-fab horizontal="end" vertical="bottom" slot="fixed">
+    <ion-fab-button color="light">
+      <ion-icon md="caret-back" ios="chevron-back-circle-outline"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="top">
+      <ion-button class="links" [routerLink]="['/contac']" (click)="ScrollToAbout()">
+        Contact Us
+      </ion-button>
+      <ion-button class="links" [routerLink]="['/staff']" (click)="ScrollToSta()">
+        Staff
+      </ion-button>
+      <ion-button [routerLink]="['/events']" class="links" (click)="ScrollToEve()">
+        Events
+      </ion-button>
+      <ion-button class="links"  [routerLink]="['/mision']" (click)="ScrollToMis()">
+        Mission
+      </ion-button>
+      <ion-button [routerLink]="['/biginning']" class="links" >
+        Beginning
+      </ion-button>
+    </ion-fab-list>
+  </ion-fab>
+
+
+</ion-content>
